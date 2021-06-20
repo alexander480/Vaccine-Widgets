@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,44 @@
 		0AAB44952671B8F100F03F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44802671B8F000F03F03 /* ContentView.swift */; };
 		0AAB44962671B8F100F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44812671B8F100F03F03 /* Assets.xcassets */; };
 		0AAB44972671B8F100F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44812671B8F100F03F03 /* Assets.xcassets */; };
+		0AAB44A12671BBCE00F03F03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A02671BBCE00F03F03 /* Data.swift */; };
+		0AAB44A22671BBCE00F03F03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A02671BBCE00F03F03 /* Data.swift */; };
+		0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
+		0AAB44A52671C5AB00F03F03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
+		0AAB44AD2671CB1400F03F03 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB44AC2671CB1400F03F03 /* WidgetKit.framework */; };
+		0AAB44AF2671CB1400F03F03 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB44AE2671CB1400F03F03 /* SwiftUI.framework */; };
+		0AAB44B22671CB1400F03F03 /* VaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */; };
+		0AAB44B42671CB1600F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44B32671CB1600F03F03 /* Assets.xcassets */; };
+		0AAB44B82671CB1600F03F03 /* Vaccine Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0AAB44BE2671CC4D00F03F03 /* WidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */; };
+		0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABE829426746C2900726068 /* SwiftUICharts */; };
+		0ABE8297267479CE00726068 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE8296267479CE00726068 /* CovidData.swift */; };
+		0ABE8298267479CE00726068 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE8296267479CE00726068 /* CovidData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AAB44B62671CB1600F03F03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAB447A2671B8F000F03F03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAB44A92671CB1400F03F03;
+			remoteInfo = "Vaccination DataExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AAB44BC2671CB1600F03F03 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0AAB44B82671CB1600F03F03 /* Vaccine Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_19_Data_WidgetsApp.swift; sourceTree = "<group>"; };
@@ -24,6 +61,16 @@
 		0AAB448E2671B8F100F03F03 /* COVID-19 Data Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Data Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB44902671B8F100F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAB44912671B8F100F03F03 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0AAB44A02671BBCE00F03F03 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		0AAB44A32671C5AB00F03F03 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaccine Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB44AC2671CB1400F03F03 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0AAB44AE2671CB1400F03F03 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidget.swift; sourceTree = "<group>"; };
+		0AAB44B32671CB1600F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AAB44B52671CB1600F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHelper.swift; sourceTree = "<group>"; };
+		0ABE8296267479CE00726068 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +86,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAB44A72671CB1400F03F03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB44AF2671CB1400F03F03 /* SwiftUI.framework in Frameworks */,
+				0AAB44AD2671CB1400F03F03 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +107,8 @@
 				0AAB447E2671B8F000F03F03 /* Shared */,
 				0AAB44882671B8F100F03F03 /* iOS */,
 				0AAB448F2671B8F100F03F03 /* macOS */,
+				0AAB44B02671CB1400F03F03 /* Widget */,
+				0AAB44AB2671CB1400F03F03 /* Frameworks */,
 				0AAB44872671B8F100F03F03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +118,9 @@
 			children = (
 				0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */,
 				0AAB44802671B8F000F03F03 /* ContentView.swift */,
+				0AAB44A02671BBCE00F03F03 /* Data.swift */,
+				0ABE8296267479CE00726068 /* CovidData.swift */,
+				0AAB44A32671C5AB00F03F03 /* Extensions.swift */,
 				0AAB44812671B8F100F03F03 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -69,6 +131,7 @@
 			children = (
 				0AAB44862671B8F100F03F03 /* COVID-19 Data Widgets.app */,
 				0AAB448E2671B8F100F03F03 /* COVID-19 Data Widgets.app */,
+				0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +153,26 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		0AAB44AB2671CB1400F03F03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44AC2671CB1400F03F03 /* WidgetKit.framework */,
+				0AAB44AE2671CB1400F03F03 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AAB44B02671CB1400F03F03 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */,
+				0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */,
+				0AAB44B32671CB1600F03F03 /* Assets.xcassets */,
+				0AAB44B52671CB1600F03F03 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,12 +183,17 @@
 				0AAB44822671B8F100F03F03 /* Sources */,
 				0AAB44832671B8F100F03F03 /* Frameworks */,
 				0AAB44842671B8F100F03F03 /* Resources */,
+				0AAB44BC2671CB1600F03F03 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0AAB44B72671CB1600F03F03 /* PBXTargetDependency */,
 			);
 			name = "COVID-19 Data Widgets (iOS)";
+			packageProductDependencies = (
+				0ABE829426746C2900726068 /* SwiftUICharts */,
+			);
 			productName = "COVID-19 Data Widgets (iOS)";
 			productReference = 0AAB44862671B8F100F03F03 /* COVID-19 Data Widgets.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +215,23 @@
 			productReference = 0AAB448E2671B8F100F03F03 /* COVID-19 Data Widgets.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0AAB44A92671CB1400F03F03 /* Vaccine Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAB44B92671CB1600F03F03 /* Build configuration list for PBXNativeTarget "Vaccine Widget" */;
+			buildPhases = (
+				0AAB44A62671CB1400F03F03 /* Sources */,
+				0AAB44A72671CB1400F03F03 /* Frameworks */,
+				0AAB44A82671CB1400F03F03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vaccine Widget";
+			productName = "Vaccination DataExtension";
+			productReference = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +247,9 @@
 					0AAB448D2671B8F100F03F03 = {
 						CreatedOnToolsVersion = 12.5;
 					};
+					0AAB44A92671CB1400F03F03 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 				};
 			};
 			buildConfigurationList = 0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Data Widgets" */;
@@ -153,12 +261,16 @@
 				Base,
 			);
 			mainGroup = 0AAB44792671B8F000F03F03;
+			packageReferences = (
+				0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 0AAB44872671B8F100F03F03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0AAB44852671B8F100F03F03 /* COVID-19 Data Widgets (iOS) */,
 				0AAB448D2671B8F100F03F03 /* COVID-19 Data Widgets (macOS) */,
+				0AAB44A92671CB1400F03F03 /* Vaccine Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +292,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AAB44A82671CB1400F03F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB44B42671CB1600F03F03 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -187,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAB44A12671BBCE00F03F03 /* Data.swift in Sources */,
+				0ABE8297267479CE00726068 /* CovidData.swift in Sources */,
 				0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */,
 				0AAB44922671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */,
+				0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +319,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAB44A22671BBCE00F03F03 /* Data.swift in Sources */,
+				0ABE8298267479CE00726068 /* CovidData.swift in Sources */,
 				0AAB44952671B8F100F03F03 /* ContentView.swift in Sources */,
 				0AAB44932671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */,
+				0AAB44A52671C5AB00F03F03 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAB44A62671CB1400F03F03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB44B22671CB1400F03F03 /* VaccineWidget.swift in Sources */,
+				0AAB44BE2671CC4D00F03F03 /* WidgetHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AAB44B72671CB1600F03F03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAB44A92671CB1400F03F03 /* Vaccine Widget */;
+			targetProxy = 0AAB44B62671CB1600F03F03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0AAB44982671B8F100F03F03 /* Debug */ = {
@@ -318,6 +461,7 @@
 		0AAB449B2671B8F100F03F03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +484,7 @@
 		0AAB449C2671B8F100F03F03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +553,53 @@
 			};
 			name = Release;
 		};
+		0AAB44BA2671CB1600F03F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZ4LX93GR9;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deltavel.COVID-19-Data-Widgets.Vaccine-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AAB44BB2671CB1600F03F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VZ4LX93GR9;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deltavel.COVID-19-Data-Widgets.Vaccine-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,7 +630,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0AAB44B92671CB1600F03F03 /* Build configuration list for PBXNativeTarget "Vaccine Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAB44BA2671CB1600F03F03 /* Debug */,
+				0AAB44BB2671CB1600F03F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ABE829426746C2900726068 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AAB447A2671B8F000F03F03 /* Project object */;
 }
