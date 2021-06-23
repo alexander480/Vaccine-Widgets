@@ -7,6 +7,7 @@
 
 import WidgetKit
 import SwiftUI
+import SwiftUICharts
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> VaccineDataEntry {

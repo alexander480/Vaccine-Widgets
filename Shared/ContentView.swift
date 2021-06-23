@@ -18,10 +18,11 @@ struct ContentView: View {
             
             let initiatedPercentage = metrics.vaccinationsInitiatedRatio.toPercentage()
             let completedPercentage = metrics.vaccinationsCompletedRatio.toPercentage()
-            let unvaccinatedPercentage = 100 - initiatedPercentage
+            let unvaccinatedPercentage = Int(100 - initiatedPercentage)
             
-            let partiallyVaccinated: [Double] = historical.filter{ $0.peopleVaccinatedPerHundred != nil }.map{ $0.peopleVaccinatedPerHundred!.rounded() }
-            let fullyVaccinated: [Double] = historical.filter{ $0.peopleFullyVaccinatedPerHundred != nil }.map{ $0.peopleFullyVaccinatedPerHundred!.rounded() }
+            let partiallyVaccinated: [Double] = historical.filter { $0.peopleVaccinatedPerHundred != nil }.map{ $0.peopleVaccinatedPerHundred!.rounded() }
+            let nonVaccinated: [Double] = partiallyVaccinated.map { return Double(100.0 - $0) }
+            let fullyVaccinated: [Double] = historical.filter { $0.peopleFullyVaccinatedPerHundred != nil }.map{ $0.peopleFullyVaccinatedPerHundred!.rounded() }
             
             
 //            let completedRatioSeries: [Double] = timeseriesMetrics.map { metric in
@@ -54,12 +55,53 @@ struct ContentView: View {
 //                }
 //            }
             
-            MultiLineChartView(data: [(partiallyVaccinated, GradientColors.blu), (fullyVaccinated, GradientColors.green)], title: "Shots", valueSpecifier: "%.0f")
-
+            let redGradient = GradientColor(start: Color(.red), end: .red)
+            let orangeGradient = GradientColor(start: Color(.orange), end: Color(.red))
+            let greenGradient = GradientColor(start: Color(.green), end: Color(.green))
+            
+            MultiLineChartView(data: [(nonVaccinated, redGradient), (partiallyVaccinated, orangeGradient), (fullyVaccinated, greenGradient)], title: "Shots", dropShadow: false, valueSpecifier: "%.0f")
+                .padding()
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(alignment: .firstTextBaseline) {
+                    
+                    let fullyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: greenGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
+                    
+                    // let fullyVaccinatedSize = CGSize(width: 333, height: 222)
+                    
+                    LineChartView(data: fullyVaccinated, title: "Vaccinated", style: fullyVaccinatedStyle, dropShadow: false)
+                        .padding()
+                        .disabled(true)
+                    
+                    let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: orangeGradient, textColor: .orange, legendTextColor: .orange, dropShadowColor: .gray)
+                    
+                    // let fullyVaccinatedSize = CGSize(width: 333, height: 222)
+                    
+                    LineChartView(data: partiallyVaccinated, title: "Partially Protected", style: partiallyVaccinatedStyle, dropShadow: false)
+                        .padding()
+                        .disabled(true)
+                    
+                    let nonVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: redGradient, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
+                    
+                    // let fullyVaccinatedSize = CGSize(width: 333, height: 222)
+                    
+                    LineChartView(data: nonVaccinated, title: "Not Vaccinated", legend: "Legend", style: nonVaccinatedStyle, dropShadow: false)
+                        .padding()
+                        .disabled(true)
+                }
+            }
+            
             Spacer()
             
             Text("COVID-19 Vaccination Data (United States)")
                 .font(.title)
+            
+            HStack(alignment: .bottom, spacing: nil) {
+                Text("Not Vaccinated:")
+                    .font(.headline)
+                Text("\(unvaccinatedPercentage)%")
+            }
             
             HStack(alignment: .bottom, spacing: nil) {
                 Text("Vaccinations Initiated:")
