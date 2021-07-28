@@ -7,26 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
+		0A23782826ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
+		0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
+		0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
+		0A23782C26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
+		0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
+		0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
+		0A23783726ABD40E003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
+		0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
+		0A23784126AFB2DE003AFC47 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0A23784026AFB2DE003AFC47 /* Charts */; };
+		0A23784326AFB61B003AFC47 /* SingleMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784226AFB61B003AFC47 /* SingleMetricView.swift */; };
+		0A23784526AFB75C003AFC47 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784426AFB75C003AFC47 /* Provider.swift */; };
+		0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784626AFB81D003AFC47 /* EntryHelper.swift */; };
+		0A23785226AFCE5A003AFC47 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
+		0A23785426AFD144003AFC47 /* InitiatedVaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785326AFD144003AFC47 /* InitiatedVaccineWidget.swift */; };
+		0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785526AFD1B4003AFC47 /* NoneVaccineWidget.swift */; };
+		0A23785826AFD203003AFC47 /* MultiMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785726AFD203003AFC47 /* MultiMetricView.swift */; };
+		0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */; };
+		0A23785D26AFD912003AFC47 /* MultiMetricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */; };
 		0A3663BC2682ED320052AC8F /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 0A3663BB2682ED320052AC8F /* SwiftPieChart */; };
+		0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
+		0AA3DE0E26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
 		0AAB44922671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */; };
 		0AAB44932671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */; };
 		0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44802671B8F000F03F03 /* ContentView.swift */; };
 		0AAB44952671B8F100F03F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44802671B8F000F03F03 /* ContentView.swift */; };
 		0AAB44962671B8F100F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44812671B8F100F03F03 /* Assets.xcassets */; };
 		0AAB44972671B8F100F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44812671B8F100F03F03 /* Assets.xcassets */; };
-		0AAB44A12671BBCE00F03F03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A02671BBCE00F03F03 /* Data.swift */; };
-		0AAB44A22671BBCE00F03F03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A02671BBCE00F03F03 /* Data.swift */; };
 		0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
 		0AAB44A52671C5AB00F03F03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
 		0AAB44AD2671CB1400F03F03 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB44AC2671CB1400F03F03 /* WidgetKit.framework */; };
 		0AAB44AF2671CB1400F03F03 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB44AE2671CB1400F03F03 /* SwiftUI.framework */; };
-		0AAB44B22671CB1400F03F03 /* VaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */; };
+		0AAB44B22671CB1400F03F03 /* CompletedVaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44B12671CB1400F03F03 /* CompletedVaccineWidget.swift */; };
 		0AAB44B42671CB1600F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44B32671CB1600F03F03 /* Assets.xcassets */; };
 		0AAB44B82671CB1600F03F03 /* Vaccine Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0AAB44BE2671CC4D00F03F03 /* WidgetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */; };
+		0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44BD2671CC4D00F03F03 /* Entry.swift */; };
 		0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABE829426746C2900726068 /* SwiftUICharts */; };
-		0ABE8297267479CE00726068 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE8296267479CE00726068 /* CovidData.swift */; };
-		0ABE8298267479CE00726068 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE8296267479CE00726068 /* CovidData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +71,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A23782626ABBC90003AFC47 /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
+		0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalData.swift; sourceTree = "<group>"; };
+		0A23783526ABD40D003AFC47 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0A23784226AFB61B003AFC47 /* SingleMetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMetricView.swift; sourceTree = "<group>"; };
+		0A23784426AFB75C003AFC47 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		0A23784626AFB81D003AFC47 /* EntryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryHelper.swift; sourceTree = "<group>"; };
+		0A23785126AFCE5A003AFC47 /* MetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricView.swift; sourceTree = "<group>"; };
+		0A23785326AFD144003AFC47 /* InitiatedVaccineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiatedVaccineWidget.swift; sourceTree = "<group>"; };
+		0A23785526AFD1B4003AFC47 /* NoneVaccineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneVaccineWidget.swift; sourceTree = "<group>"; };
+		0A23785726AFD203003AFC47 /* MultiMetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMetricView.swift; sourceTree = "<group>"; };
+		0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidgetBundle.swift; sourceTree = "<group>"; };
+		0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMetricWidget.swift; sourceTree = "<group>"; };
 		0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_19_Data_WidgetsApp.swift; sourceTree = "<group>"; };
 		0AAB44802671B8F000F03F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AAB44812671B8F100F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,16 +91,14 @@
 		0AAB448E2671B8F100F03F03 /* COVID-19 Data Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Data Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB44902671B8F100F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAB44912671B8F100F03F03 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		0AAB44A02671BBCE00F03F03 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0AAB44A32671C5AB00F03F03 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaccine Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB44AC2671CB1400F03F03 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0AAB44AE2671CB1400F03F03 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidget.swift; sourceTree = "<group>"; };
+		0AAB44B12671CB1400F03F03 /* CompletedVaccineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedVaccineWidget.swift; sourceTree = "<group>"; };
 		0AAB44B32671CB1600F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAB44B52671CB1600F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHelper.swift; sourceTree = "<group>"; };
-		0ABE8296267479CE00726068 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
+		0AAB44BD2671CC4D00F03F03 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3663BC2682ED320052AC8F /* SwiftPieChart in Frameworks */,
+				0A23784126AFB2DE003AFC47 /* Charts in Frameworks */,
 				0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +131,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A23782E26ABBEF4003AFC47 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0A23783526ABD40D003AFC47 /* DataModel.swift */,
+				0A23782626ABBC90003AFC47 /* CurrentData.swift */,
+				0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0A23782F26ABBF50003AFC47 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44A32671C5AB00F03F03 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0A23783026ABBF5C003AFC47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44802671B8F000F03F03 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A23784826AFB84A003AFC47 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44BD2671CC4D00F03F03 /* Entry.swift */,
+				0A23784626AFB81D003AFC47 /* EntryHelper.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0A23784A26AFB875003AFC47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A23784226AFB61B003AFC47 /* SingleMetricView.swift */,
+				0A23785726AFD203003AFC47 /* MultiMetricView.swift */,
+				0A23785126AFCE5A003AFC47 /* MetricView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A23785B26AFD4CE003AFC47 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB44B12671CB1400F03F03 /* CompletedVaccineWidget.swift */,
+				0A23785326AFD144003AFC47 /* InitiatedVaccineWidget.swift */,
+				0A23785526AFD1B4003AFC47 /* NoneVaccineWidget.swift */,
+				0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		0AAB44792671B8F000F03F03 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				0AAB447F2671B8F000F03F03 /* COVID_19_Data_WidgetsApp.swift */,
-				0AAB44802671B8F000F03F03 /* ContentView.swift */,
-				0AAB44A02671BBCE00F03F03 /* Data.swift */,
-				0ABE8296267479CE00726068 /* CovidData.swift */,
-				0AAB44A32671C5AB00F03F03 /* Extensions.swift */,
+				0A23783026ABBF5C003AFC47 /* Views */,
+				0A23782F26ABBF50003AFC47 /* Helpers */,
+				0A23782E26ABBEF4003AFC47 /* Data */,
 				0AAB44812671B8F100F03F03 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -167,8 +250,11 @@
 		0AAB44B02671CB1400F03F03 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				0AAB44B12671CB1400F03F03 /* VaccineWidget.swift */,
-				0AAB44BD2671CC4D00F03F03 /* WidgetHelper.swift */,
+				0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */,
+				0A23784426AFB75C003AFC47 /* Provider.swift */,
+				0A23785B26AFD4CE003AFC47 /* Widgets */,
+				0A23784A26AFB875003AFC47 /* Views */,
+				0A23784826AFB84A003AFC47 /* Data */,
 				0AAB44B32671CB1600F03F03 /* Assets.xcassets */,
 				0AAB44B52671CB1600F03F03 /* Info.plist */,
 			);
@@ -196,6 +282,7 @@
 			packageProductDependencies = (
 				0ABE829426746C2900726068 /* SwiftUICharts */,
 				0A3663BB2682ED320052AC8F /* SwiftPieChart */,
+				0A23784026AFB2DE003AFC47 /* Charts */,
 			);
 			productName = "COVID-19 Data Widgets (iOS)";
 			productReference = 0AAB44862671B8F100F03F03 /* COVID-19 Data Widgets.app */;
@@ -231,6 +318,8 @@
 			dependencies = (
 			);
 			name = "Vaccine Widget";
+			packageProductDependencies = (
+			);
 			productName = "Vaccination DataExtension";
 			productReference = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -267,6 +356,7 @@
 			packageReferences = (
 				0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */,
 				0A3663BA2682ED320052AC8F /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
+				0A23783F26AFB2DE003AFC47 /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 			);
 			productRefGroup = 0AAB44872671B8F100F03F03 /* Products */;
 			projectDirPath = "";
@@ -311,9 +401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAB44A12671BBCE00F03F03 /* Data.swift in Sources */,
-				0ABE8297267479CE00726068 /* CovidData.swift in Sources */,
+				0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */,
 				0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */,
+				0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */,
+				0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
+				0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */,
 				0AAB44922671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */,
 				0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */,
 			);
@@ -323,9 +415,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAB44A22671BBCE00F03F03 /* Data.swift in Sources */,
-				0ABE8298267479CE00726068 /* CovidData.swift in Sources */,
+				0A23782826ABBC90003AFC47 /* CurrentData.swift in Sources */,
 				0AAB44952671B8F100F03F03 /* ContentView.swift in Sources */,
+				0AA3DE0E26B118C2006EC6EB /* MetricView.swift in Sources */,
+				0A23782C26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
+				0A23783726ABD40E003AFC47 /* DataModel.swift in Sources */,
 				0AAB44932671B8F100F03F03 /* COVID_19_Data_WidgetsApp.swift in Sources */,
 				0AAB44A52671C5AB00F03F03 /* Extensions.swift in Sources */,
 			);
@@ -335,8 +429,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAB44B22671CB1400F03F03 /* VaccineWidget.swift in Sources */,
-				0AAB44BE2671CC4D00F03F03 /* WidgetHelper.swift in Sources */,
+				0AAB44B22671CB1400F03F03 /* CompletedVaccineWidget.swift in Sources */,
+				0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */,
+				0A23784526AFB75C003AFC47 /* Provider.swift in Sources */,
+				0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */,
+				0A23785226AFCE5A003AFC47 /* MetricView.swift in Sources */,
+				0A23785D26AFD912003AFC47 /* MultiMetricWidget.swift in Sources */,
+				0A23785426AFD144003AFC47 /* InitiatedVaccineWidget.swift in Sources */,
+				0A23785826AFD203003AFC47 /* MultiMetricView.swift in Sources */,
+				0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */,
+				0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */,
+				0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */,
+				0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
+				0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */,
+				0A23784326AFB61B003AFC47 /* SingleMetricView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +752,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0A23783F26AFB2DE003AFC47 /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		0A3663BA2682ED320052AC8F /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
@@ -665,6 +779,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A23784026AFB2DE003AFC47 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A23783F26AFB2DE003AFC47 /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
 		0A3663BB2682ED320052AC8F /* SwiftPieChart */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A3663BA2682ED320052AC8F /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
