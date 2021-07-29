@@ -344,7 +344,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Data Widgets" */;
+			buildConfigurationList = 0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Vaccination Widgets" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -713,7 +713,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Data Widgets" */ = {
+		0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Vaccination Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AAB44982671B8F100F03F03 /* Debug */,
