@@ -1,5 +1,5 @@
 //
-//  COVID_19_Data_WidgetsApp.swift
+//  VaccineApp.swift
 //  Shared
 //
 //  Created by Alexander Lester on 6/9/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct COVID_19_Data_WidgetsApp: App {
+struct VaccineApp: App {
     @ObservedObject var model = DataModel(isoCode: "USA")
     
     var body: some Scene {
