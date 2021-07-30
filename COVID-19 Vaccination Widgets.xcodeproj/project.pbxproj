@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0FE85F26B288090094F25B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0A0FE85E26B288090094F25B /* SwiftUICharts */; };
 		0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
 		0A23782826ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
 		0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
@@ -116,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0FE85F26B288090094F25B /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +303,9 @@
 			dependencies = (
 			);
 			name = "COVID-19 Vaccination Widgets (macOS)";
+			packageProductDependencies = (
+				0A0FE85E26B288090094F25B /* SwiftUICharts */,
+			);
 			productName = "COVID-19 Data Widgets (macOS)";
 			productReference = 0AAB448E2671B8F100F03F03 /* COVID-19 Vaccination Widgets.app */;
 			productType = "com.apple.product-type.application";
@@ -781,6 +786,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A0FE85E26B288090094F25B /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		0A23784026AFB2DE003AFC47 /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A23783F26AFB2DE003AFC47 /* XCRemoteSwiftPackageReference "swiftui-charts" */;

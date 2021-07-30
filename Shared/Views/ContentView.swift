@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 import SwiftUICharts
-import SwiftPieChart
 
 struct ContentView: View {
     @ObservedObject var model: DataModel = DataModel(isoCode: "USA")
@@ -23,7 +22,7 @@ struct ContentView: View {
             let initiatedPercentage = Int(self.model.current.initiated * 100)
             let unvaccinatedPercentage = Int((1.0 - self.model.current.initiated) * 100)
             
-            HStack(alignment: .center) {
+            HStack(alignment: .top) {
                 HStack(alignment: .center) {
                     VStack(alignment: .center, spacing: 8.0) {
                         ZStack {
@@ -91,6 +90,7 @@ struct ContentView: View {
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 150, alignment: .bottom)
+
             
             
             // -- Text
@@ -127,28 +127,35 @@ struct ContentView: View {
                 ScrollView() {
                     VStack(alignment: .leading) {
                         
-                        let chartHeight = (UIScreen.main.bounds.height - 210 /*Metric View */) / 2
                         let chartWidth = (UIScreen.main.bounds.width)
-
-                        let lineViewGradient = GradientColor(start: Color(.yellow), end: Color(.green))
-                        let lineViewStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: lineViewGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
-                    LineView(data: initiatedTimeline, title: "Vaccinations", legend: "US Population", style: lineViewStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
-                        .padding([.leading, .trailing])
-                        .frame(width: chartWidth, height: 360, alignment: .top)
                         
-                        let lineViewGradient2 = GradientColor(start: Color(.red), end: Color(.orange))
-                        let lineViewStyle2 = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: lineViewGradient2, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
-                        LineView(data: unvaccinatedTimeline, title: "Cases", legend: "Reported Cases", style: lineViewStyle2, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+                        let greenGradient = GradientColor(start: .green, end: .green)
+                        let blueGradient = GradientColor(start: .blue, end: .blue)
+                        let redGradient = GradientColor(start: .red, end: .red)
+                        
+                        // -- Fully Vaccinated - Line Chart
+                        let fullyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: greenGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
+                        LineView(data: completedTimeline, title: "Fully Vaccinated", legend: "US Population", style: fullyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
                             .padding([.leading, .trailing])
-                        .frame(width: chartWidth, height: 360, alignment: .top)
+                            .frame(width: chartWidth, height: 360, alignment: .top)
+                        
+                        // -- Partially Vaccinated - Line Chart
+                        let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: blueGradient, textColor: .orange, legendTextColor: .orange, dropShadowColor: .gray)
+                        LineView(data: initiatedTimeline, title: "Vaccinated", legend: "US Population", style: partiallyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+                            .padding([.leading, .trailing])
+                            .frame(width: chartWidth, height: 360, alignment: .top)
+                        
+                        // -- Not Vaccinated - Line Chart
+                        let unvaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: redGradient, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
+                        LineView(data: unvaccinatedTimeline, title: "Not Vaccinated", legend: "US Population", style: unvaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+                            .padding([.leading, .trailing])
+                            .frame(width: chartWidth, height: 360, alignment: .top)
                     }
                 }
                 //.frame(width: UIScreen.main.bounds.width, height: ((360 * 2)), alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
 
-//                    let redGradient = GradientColor(start: Color(.red), end: .orange)
-//                    let orangeGradient = GradientColor(start: Color(.orange), end: Color(.yellow))
-//                    let greenGradient = GradientColor(start: Color(.yellow), end: Color(.green))
+                    
 //                    // let pinkGradient = GradientColor(start: .orange, end: .pink)
 //
 //                    // -- Total Vaccinations - Line Chart
@@ -159,29 +166,9 @@ struct ContentView: View {
 //                    MultiLineChartView(data: [(unvaccinatedTimeline, redGradient), (initiatedTimeline, orangeGradient), (completedTimeline, greenGradient)], title: "Shots", dropShadow: true, valueSpecifier: "%8.4f")
 //                        .padding()
 //
-//                    // -- Fully Vaccinated - Line Chart
-//                    let fullyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: greenGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
-//                    LineChartView(data: completedTimeline, title: "Vaccinated", style: fullyVaccinatedStyle, dropShadow: true)
-//                        .padding()
-//                        .disabled(true)
 //
-//                    // -- Partially Vaccinated - Line Chart
-//                    let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: orangeGradient, textColor: .orange, legendTextColor: .orange, dropShadowColor: .gray)
-//                    LineChartView(data: initiatedTimeline, title: "Partially Protected", style: partiallyVaccinatedStyle, dropShadow: true)
-//                        .padding()
-//                        .disabled(true)
-//
-//                    // -- Not Vaccinated - Line Chart
-//                    let unvaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: redGradient, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
-//                    LineChartView(data: unvaccinatedTimeline, title: "Not Vaccinated", legend: "Legend", style: unvaccinatedStyle, dropShadow: true)
-//                        .padding()
-//                        .disabled(true)
                 }
         }
-        
-            
-            
-        //}
     }
 }
 
