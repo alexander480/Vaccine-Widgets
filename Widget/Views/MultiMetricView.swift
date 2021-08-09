@@ -19,12 +19,12 @@ struct MultiMetricView: View {
         HStack(alignment: .center) {
             
             MetricView(title: "Fully Vaccinated", color: .green, percentage: completedPercentage)
-                .padding(.all, 8.0)
+                .padding(.all, 6.0)
             
             Divider()
             
             MetricView(title: "Partly Vaccinated", color: .blue, percentage: initiatedPercentage)
-                .padding(.all, 8.0)
+                .padding(.all, 6.0)
             
 //            MetricView(title: "Not Vaccinated", color: .red, percentage: nonePercentage)
 //                .padding(.all, 0.0)

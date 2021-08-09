@@ -17,8 +17,9 @@ struct MetricView: View {
     var body: some View {
         // - Fully Vaccinated
         HStack(alignment: .top) {
-            VStack(alignment: .center, spacing: 8.0) {
+            VStack(alignment: .center, spacing: 10.0) {
                 ZStack {
+
                     Circle()
                         .foregroundColor(self.color)
 
@@ -27,16 +28,18 @@ struct MetricView: View {
                         .bold()
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                }
+                        .padding([.top], 2.75)
+                }.padding([.bottom], 2.75)
                 
                 Text(self.title)
-                    .font(.footnote)
+                    .font(.caption)
                     .fontWeight(.medium)
                     .foregroundColor(self.color)
                     .multilineTextAlignment(.center)
-                    .lineLimit(2)
+                    .lineLimit(1)
                 
-            }.padding()
+            }
+            .padding()
         }
     }
 }

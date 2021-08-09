@@ -29,7 +29,7 @@ struct SingleMetricView : View {
             case .completed:
                 return MetricView(title: "Fully Vaccinated", color: .green, percentage: completedPercentage)
             case .initiated:
-                return MetricView(title: "Vaccinated", color: .blue, percentage: initiatedPercentage)
+                return MetricView(title: "Partly Vaccinated", color: .blue, percentage: initiatedPercentage)
             case .none:
                 return MetricView(title: "Not Vaccinated", color: .red, percentage: nonePercentage)
         }

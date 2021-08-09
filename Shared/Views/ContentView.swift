@@ -60,8 +60,8 @@ struct ContentView: View {
                                 .multilineTextAlignment(.center)
                         }
                         
-                        Text("Vaccinated")
-                            .font(.footnote)
+                        Text("Partly Vaccinated")
+                            .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.blue)
                             .multilineTextAlignment(.center)
@@ -86,7 +86,7 @@ struct ContentView: View {
                         }
                         
                         Text("Not Vaccinated")
-                            .font(.footnote)
+                            .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
