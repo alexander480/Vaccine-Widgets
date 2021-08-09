@@ -28,8 +28,8 @@ struct MetricView: View {
                         .bold()
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                        .padding([.top], 2.75)
-                }.padding([.bottom], 2.75)
+                        .padding([.top], 3.0)
+                }.padding([.bottom], 2.0)
                 
                 Text(self.title)
                     .font(.caption)
