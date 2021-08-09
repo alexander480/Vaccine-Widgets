@@ -24,7 +24,7 @@ struct ContentView: View {
             
             HStack(alignment: .top) {
                 HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 8.0) {
+                    VStack(alignment: .center, spacing: 16.0) {
                         ZStack {
                             Circle()
                                 .foregroundColor(.green)
@@ -41,12 +41,14 @@ struct ContentView: View {
                             .fontWeight(.medium)
                             .foregroundColor(.green)
                             .multilineTextAlignment(.center)
+                            .lineLimit(1)
                         
-                    }.padding()
+                    }
+                    .padding(.all, 10.0)
                 }
                 
                 HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 8.0) {
+                    VStack(alignment: .center, spacing: 16.0) {
                         ZStack {
                             Circle()
                                 .foregroundColor(.blue)
@@ -59,16 +61,19 @@ struct ContentView: View {
                         }
                         
                         Text("Vaccinated")
-                            .font(.caption)
+                            .font(.footnote)
                             .fontWeight(.medium)
                             .foregroundColor(.blue)
                             .multilineTextAlignment(.center)
+                            .lineLimit(1)
+                            
                         
-                    }.padding()
+                    }
+                    .padding(.all, 10.0)
                 }
                 
                 HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 8.0) {
+                    VStack(alignment: .center, spacing: 16.0) {
                         ZStack {
                             Circle()
                                 .foregroundColor(.red)
@@ -81,12 +86,14 @@ struct ContentView: View {
                         }
                         
                         Text("Not Vaccinated")
-                            .font(.caption)
+                            .font(.footnote)
                             .fontWeight(.medium)
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
+                            .lineLimit(1)
                         
-                    }.padding()
+                    }
+                    .padding([.all], 10.0)
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 150, alignment: .bottom)
@@ -140,8 +147,8 @@ struct ContentView: View {
                             .frame(width: chartWidth, height: 360, alignment: .top)
                         
                         // -- Partially Vaccinated - Line Chart
-                        let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: blueGradient, textColor: .orange, legendTextColor: .orange, dropShadowColor: .gray)
-                        LineView(data: initiatedTimeline, title: "Vaccinated", legend: "US Population", style: partiallyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+                        let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: blueGradient, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
+                        LineView(data: initiatedTimeline, title: "Partially Vaccinated", legend: "US Population", style: partiallyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
                             .padding([.leading, .trailing])
                             .frame(width: chartWidth, height: 360, alignment: .top)
                         

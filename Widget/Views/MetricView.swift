@@ -16,12 +16,12 @@ struct MetricView: View {
     
     var body: some View {
         // - Fully Vaccinated
-        HStack(alignment: .center) {
+        HStack(alignment: .top) {
             VStack(alignment: .center, spacing: 8.0) {
                 ZStack {
                     Circle()
                         .foregroundColor(self.color)
-                    
+
                     Text("\(self.percentage)%")
                         .font(.title2)
                         .bold()
@@ -30,10 +30,11 @@ struct MetricView: View {
                 }
                 
                 Text(self.title)
-                    .font(.caption)
+                    .font(.footnote)
                     .fontWeight(.medium)
                     .foregroundColor(self.color)
                     .multilineTextAlignment(.center)
+                    .lineLimit(2)
                 
             }.padding()
         }
@@ -45,7 +46,7 @@ struct MetricView_Previews: PreviewProvider {
         MetricView(title: "Fully Vaccinated", color: .green, percentage: 20)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         
-        MetricView(title: "Partially Vaccinated", color: .orange, percentage: 20)
+        MetricView(title: "Vaccinated", color: .blue, percentage: 20)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         
         MetricView(title: "Not Vaccinated", color: .red, percentage: 20)
