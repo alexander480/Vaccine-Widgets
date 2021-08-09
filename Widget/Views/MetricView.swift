@@ -46,7 +46,7 @@ struct MetricView_Previews: PreviewProvider {
         MetricView(title: "Fully Vaccinated", color: .green, percentage: 20)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         
-        MetricView(title: "Vaccinated", color: .blue, percentage: 20)
+        MetricView(title: "Partly Vaccinated", color: .blue, percentage: 20)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         
         MetricView(title: "Not Vaccinated", color: .red, percentage: 20)
