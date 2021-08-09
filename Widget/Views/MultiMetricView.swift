@@ -14,16 +14,16 @@ struct MultiMetricView: View {
     var body: some View {
         let completedPercentage = Int(entry.metrics.completed * 100)
         let initiatedPercentage = Int(entry.metrics.initiated * 100)
-        let nonePercentage = Int((1.0 - entry.metrics.initiated) * 100)
+        // let nonePercentage = Int((1.0 - entry.metrics.initiated) * 100)
 
         HStack(alignment: .center) {
-            MetricView(title: "Fully Vaccinated", color: .green, percentage: completedPercentage)
-                .padding(.all, 0.0)
-            MetricView(title: "Partly Vaccinated", color: .blue, percentage: initiatedPercentage)
-                .padding(.all, 0.0)
             
-            MetricView(title: "Not Vaccinated", color: .red, percentage: nonePercentage)
-                .padding(.all, 0.0)
+            MetricView(title: "Fully Vaccinated", color: .green, percentage: completedPercentage)
+            
+            MetricView(title: "Partly Vaccinated", color: .blue, percentage: initiatedPercentage)
+            
+//            MetricView(title: "Not Vaccinated", color: .red, percentage: nonePercentage)
+//                .padding(.all, 0.0)
                 
         }.padding(.all, 0.0)
     }
