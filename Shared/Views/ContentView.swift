@@ -11,124 +11,30 @@ import SwiftUI
 import SwiftUICharts
 
 struct ContentView: View {
-    @ObservedObject var model: DataModel = DataModel(isoCode: "USA")
+    @ObservedObject var model: DataModel = DataModel()
     
     var body: some View {
         VStack(alignment: .leading) {
             
             // MARK: Current Metrics
             
-            let completedPercentage = Int(self.model.current.completed * 100)
-            let initiatedPercentage = Int(self.model.current.initiated * 100)
-            let unvaccinatedPercentage = Int((1.0 - self.model.current.initiated) * 100)
-            
-            HStack(alignment: .top) {
-                HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 16.0) {
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.green)
-                            
-                            Text("\(completedPercentage)%")
-                                .font(.title2)
-                                .bold()
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                        }
-                        
-                        Text("Fully Vaccinated")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(.green)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(1)
-                        
-                    }
-                    .padding(.all, 10.0)
-                }
-                
-                HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 16.0) {
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.blue)
-                            
-                            Text("\(initiatedPercentage)%")
-                                .font(.title2)
-                                .bold()
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                        }
-                        
-                        Text("Partly Vaccinated")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(.blue)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(1)
-                            
-                        
-                    }
-                    .padding(.all, 10.0)
-                }
-                
-                HStack(alignment: .center) {
-                    VStack(alignment: .center, spacing: 16.0) {
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.red)
-                            
-                            Text("\(unvaccinatedPercentage)%")
-                                .font(.title2)
-                                .bold()
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                        }
-                        
-                        Text("Not Vaccinated")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(.red)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(1)
-                        
-                    }
-                    .padding([.all], 10.0)
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width, height: 150, alignment: .bottom)
+			HStack(alignment: .top) {
+				SingleMetricView(metrics: self.$model.current, status: VaccineStatus.completed, shouldShortenTitle: true)
+				SingleMetricView(metrics: self.$model.current, status: VaccineStatus.initiated, shouldShortenTitle: true)
+				SingleMetricView(metrics: self.$model.current, status: VaccineStatus.none, shouldShortenTitle: true)
+			}
+			.frame(width: UIScreen.main.bounds.width, height: 150, alignment: .bottom)
+			.onAppear(perform: self.model.fetchCurrent)
 
-            
-            
-            // -- Text
-//            Group {
-//                Text("COVID-19 Vaccination Data (United States)").font(.title)
-//
-//                HStack(alignment: .bottom, spacing: nil) {
-//                    Text("Vaccinations Completed:").font(.headline)
-//                    Text("\(completedPercentage)%")
-//                }
-//
-//                HStack(alignment: .bottom, spacing: nil) {
-//                    Text("Vaccinations Initiated:").font(.headline)
-//                    Text("\(initiatedPercentage)%")
-//                }
-//
-//                HStack(alignment: .bottom, spacing: nil) {
-//                    Text("Not Vaccinated:").font(.headline)
-//                    Text("\(unvaccinatedPercentage)%")
-//                }
-//            }
-            
             // MARK: Historical Metrics
             
-            let completedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleFullyVaccinatedPerHundred })
+			let completedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleFullyVaccinatedPerHundred })
             let initiatedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleVaccinatedPerHundred })
             let unvaccinatedTimeline: [Double] = initiatedTimeline.compactMap({ return (100.0 - $0) })
             
-            let totalVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.totalVaccinations })
+            // let totalVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.totalVaccinations })
             
-            //ScrollView(.horizontal, showsIndicators: false) {
+            // ScrollView(.horizontal, showsIndicators: false) {
                 
             HStack(alignment: .center) {
                 ScrollView() {
@@ -159,30 +65,14 @@ struct ContentView: View {
                             .frame(width: chartWidth, height: 360, alignment: .top)
                     }
                 }
-                //.frame(width: UIScreen.main.bounds.width, height: ((360 * 2)), alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                
-
-                    
-//                    // let pinkGradient = GradientColor(start: .orange, end: .pink)
-//
-//                    // -- Total Vaccinations - Line Chart
-//                    let lineChartStyle = ChartStyle(backgroundColor: .secondary, accentColor: .green, gradientColor: greenGradient, textColor: .primary, legendTextColor: .green, dropShadowColor: .gray)
-//                    LineChartView(data: totalVaccinationsTimeline, title: "Total Vaccinations", legend: "Legendary", style: lineChartStyle, rateValue: nil, dropShadow: false, valueSpecifier: "%10d")
-//
-//                    // -- Completed vs. Initiated vs. Unvaccinated - Multi-Line Chart
-//                    MultiLineChartView(data: [(unvaccinatedTimeline, redGradient), (initiatedTimeline, orangeGradient), (completedTimeline, greenGradient)], title: "Shots", dropShadow: true, valueSpecifier: "%8.4f")
-//                        .padding()
-//
-//
-                }
-        }
-    }
+			}.onAppear(perform: self.model.fetchHistorical)
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let model: DataModel = DataModel(isoCode: "USA")
-        
+        let model: DataModel = DataModel()
         ContentView(model: model)
     }
 }

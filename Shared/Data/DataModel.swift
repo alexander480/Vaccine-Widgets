@@ -8,14 +8,10 @@
 import Foundation
 
 class DataModel: ObservableObject {
-    @Published var current: CurrentMetric = CurrentMetric(initiated: 0.02, completed: 0.01)
-    @Published var historical: [HistoricalMetric] = [HistoricalMetric]()
-    
-    init(isoCode: String = "USA") {
-        self.fetchCurrent()
-        self.fetchHistorical(isoCode: isoCode)
-    }
-    
+	var isoCode: String = "USA"
+    @Published var current: CurrentMetric = CurrentMetric(initiated: 0.00, completed: 0.00)
+	@Published var historical: [HistoricalMetric] = [HistoricalMetric(totalVaccinations: 0.0, peopleVaccinated: 0.0, totalVaccinationsPerHundred: 0.0, peopleVaccinatedPerHundred: 0.0, dailyVaccinations: 0.0, dailyVaccinationsPerMillion: 0.0, peopleFullyVaccinated: 0.0, peopleFullyVaccinatedPerHundred: 0.0, dailyVaccinationsRaw: 0.0)]
+
     func fetchCurrent() {
         let url = URL(string: "https://api.covidactnow.org/v2/country/US.json?apiKey=ce6514b87dc446568ccde9f609dbe8cb")!
         let request = URLRequest(url: url)
@@ -31,7 +27,7 @@ class DataModel: ObservableObject {
         }.resume()
     }
     
-    func fetchHistorical(isoCode: String) {
+    func fetchHistorical() {
         let url = URL(string: "https://covid.ourworldindata.org/data/vaccinations/vaccinations.json")!
         let request = URLRequest(url: url)
         
@@ -39,7 +35,7 @@ class DataModel: ObservableObject {
             if let data = data {
                 do {
                     let allCountries = try JSONDecoder().decode([CountryData].self, from: data)
-                    if let specifiedCountry = allCountries.first(where: { $0.isoCode == isoCode }) {
+					if let specifiedCountry = allCountries.first(where: { $0.isoCode == self.isoCode }) {
                         print("[SUCCESS] Successfully Validated Historical Metrics For Specified Country. [DATA] \(specifiedCountry.metrics.count) Entries.")
                         DispatchQueue.main.async { self.historical = specifiedCountry.metrics }
                     }

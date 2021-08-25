@@ -12,7 +12,7 @@ struct InitiatedVaccineWidget: Widget {
     let kind: String = "InitiatedVaccineWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in SingleMetricView(entry: entry, status: .initiated) }
+		StaticConfiguration(kind: kind, provider: Provider()) { entry in SingleMetricView(metrics: entry.metrics, status: .initiated) }
             .supportedFamilies([.systemSmall])
             .configurationDisplayName("Partially Vaccinated")
             .description("This widget displays the percentage of partially vaccinated people in the United States.")
@@ -21,9 +21,9 @@ struct InitiatedVaccineWidget: Widget {
 
 struct InitiatedVaccineWidgetPreviews: PreviewProvider {
     static var previews: some View {
-        let placeholderEntry = EntryHelper.createPlaceholder()
+        let entry = EntryHelper.createPlaceholder()
         
-        SingleMetricView(entry: placeholderEntry, status: .initiated)
+		SingleMetricView(metrics: entry.metrics, status: .initiated)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

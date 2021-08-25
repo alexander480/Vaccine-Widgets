@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct VaccineApp: App {
-    @ObservedObject var model = DataModel(isoCode: "USA")
+    @ObservedObject var model = DataModel()
     
     var body: some Scene {
         WindowGroup {

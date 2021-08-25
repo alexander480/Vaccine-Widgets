@@ -7,13 +7,12 @@
 
 import WidgetKit
 import SwiftUI
-// import SwiftUICharts
 
 struct CompletedVaccineWidget: Widget {
     let kind: String = "CompletedVaccineWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in SingleMetricView(entry: entry, status: .completed) }
+		StaticConfiguration(kind: kind, provider: Provider()) { entry in SingleMetricView(metrics: entry.metrics, status: .completed) }
             .supportedFamilies([.systemSmall])
             .configurationDisplayName("Fully Vaccinated")
             .description("This widget displays the percentage of fully vaccinated people in the United States.")
@@ -22,9 +21,9 @@ struct CompletedVaccineWidget: Widget {
 
 struct CompletedVaccineWidgetPreviews: PreviewProvider {
     static var previews: some View {
-        let placeholderEntry = EntryHelper.createPlaceholder()
+        let entry = EntryHelper.createPlaceholder()
         
-        SingleMetricView(entry: placeholderEntry, status: .completed)
+		SingleMetricView(metrics: entry.metrics, status: .completed)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

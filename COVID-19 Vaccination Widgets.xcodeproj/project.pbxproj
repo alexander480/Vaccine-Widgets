@@ -13,15 +13,19 @@
 		0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
 		0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
 		0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
-		0A23784326AFB61B003AFC47 /* SingleMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784226AFB61B003AFC47 /* SingleMetricView.swift */; };
 		0A23784526AFB75C003AFC47 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784426AFB75C003AFC47 /* Provider.swift */; };
 		0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784626AFB81D003AFC47 /* EntryHelper.swift */; };
-		0A23785226AFCE5A003AFC47 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
 		0A23785426AFD144003AFC47 /* InitiatedVaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785326AFD144003AFC47 /* InitiatedVaccineWidget.swift */; };
 		0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785526AFD1B4003AFC47 /* NoneVaccineWidget.swift */; };
-		0A23785826AFD203003AFC47 /* MultiMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785726AFD203003AFC47 /* MultiMetricView.swift */; };
 		0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */; };
 		0A23785D26AFD912003AFC47 /* MultiMetricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */; };
+		0A631C6526D5E11A0072BAC4 /* MultiMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785726AFD203003AFC47 /* MultiMetricView.swift */; };
+		0A631C6626D5E11A0072BAC4 /* SingleMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784226AFB61B003AFC47 /* SingleMetricView.swift */; };
+		0A631C6726D5E1410072BAC4 /* MultiMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785726AFD203003AFC47 /* MultiMetricView.swift */; };
+		0A631C6826D5E1410072BAC4 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
+		0A631C6926D5E1410072BAC4 /* SingleMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784226AFB61B003AFC47 /* SingleMetricView.swift */; };
+		0A631C6C26D5F10F0072BAC4 /* CurvedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */; };
+		0A631C6D26D5F10F0072BAC4 /* CurvedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */; };
 		0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
 		0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB447F2671B8F000F03F03 /* VaccineApp.swift */; };
 		0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44802671B8F000F03F03 /* ContentView.swift */; };
@@ -73,6 +77,7 @@
 		0A23785726AFD203003AFC47 /* MultiMetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMetricView.swift; sourceTree = "<group>"; };
 		0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidgetBundle.swift; sourceTree = "<group>"; };
 		0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMetricWidget.swift; sourceTree = "<group>"; };
+		0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurvedText.swift; path = MetricViews/CurvedText.swift; sourceTree = "<group>"; };
 		0AAB447F2671B8F000F03F03 /* VaccineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineApp.swift; sourceTree = "<group>"; };
 		0AAB44802671B8F000F03F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AAB44812671B8F100F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +135,9 @@
 		0A23783026ABBF5C003AFC47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */,
 				0AAB44802671B8F000F03F03 /* ContentView.swift */,
+				0A631C6A26D5E14B0072BAC4 /* MetricViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,16 +151,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		0A23784A26AFB875003AFC47 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0A23784226AFB61B003AFC47 /* SingleMetricView.swift */,
-				0A23785726AFD203003AFC47 /* MultiMetricView.swift */,
-				0A23785126AFCE5A003AFC47 /* MetricView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		0A23785B26AFD4CE003AFC47 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +160,16 @@
 				0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		0A631C6A26D5E14B0072BAC4 /* MetricViews */ = {
+			isa = PBXGroup;
+			children = (
+				0A23784226AFB61B003AFC47 /* SingleMetricView.swift */,
+				0A23785726AFD203003AFC47 /* MultiMetricView.swift */,
+				0A23785126AFCE5A003AFC47 /* MetricView.swift */,
+			);
+			path = MetricViews;
 			sourceTree = "<group>";
 		};
 		0AAB44792671B8F000F03F03 = {
@@ -220,7 +227,6 @@
 				0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */,
 				0A23784426AFB75C003AFC47 /* Provider.swift */,
 				0A23785B26AFD4CE003AFC47 /* Widgets */,
-				0A23784A26AFB875003AFC47 /* Views */,
 				0A23784826AFB84A003AFC47 /* Data */,
 				0AAB44B32671CB1600F03F03 /* Assets.xcassets */,
 				0AAB44B52671CB1600F03F03 /* Info.plist */,
@@ -337,8 +343,11 @@
 			files = (
 				0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */,
 				0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */,
+				0A631C6526D5E11A0072BAC4 /* MultiMetricView.swift in Sources */,
+				0A631C6C26D5F10F0072BAC4 /* CurvedText.swift in Sources */,
 				0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */,
 				0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
+				0A631C6626D5E11A0072BAC4 /* SingleMetricView.swift in Sources */,
 				0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */,
 				0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */,
 				0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */,
@@ -351,18 +360,19 @@
 			files = (
 				0AAB44B22671CB1400F03F03 /* CompletedVaccineWidget.swift in Sources */,
 				0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */,
+				0A631C6926D5E1410072BAC4 /* SingleMetricView.swift in Sources */,
+				0A631C6D26D5F10F0072BAC4 /* CurvedText.swift in Sources */,
 				0A23784526AFB75C003AFC47 /* Provider.swift in Sources */,
 				0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */,
-				0A23785226AFCE5A003AFC47 /* MetricView.swift in Sources */,
 				0A23785D26AFD912003AFC47 /* MultiMetricWidget.swift in Sources */,
 				0A23785426AFD144003AFC47 /* InitiatedVaccineWidget.swift in Sources */,
-				0A23785826AFD203003AFC47 /* MultiMetricView.swift in Sources */,
+				0A631C6826D5E1410072BAC4 /* MetricView.swift in Sources */,
+				0A631C6726D5E1410072BAC4 /* MultiMetricView.swift in Sources */,
 				0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */,
 				0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */,
 				0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */,
 				0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
 				0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */,
-				0A23784326AFB61B003AFC47 /* SingleMetricView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,16 +12,39 @@ struct MetricView: View {
     @State var title: String
     @State var color: Color
     
-    @State var percentage: Int
+    @Binding var percentage: Int
+	
+	var radius: Double = 0.0
+	
+	init(title: String, color: Color, percentage: Binding<Int>) {
+		self.title = title
+		self.color = color
+		self._percentage = percentage
+	}
+	
+	init?(title: String, color: Color, percentage: Int) {
+		let bindablePercentage = Binding.constant(percentage)
+		self.init(title: title, color: color, percentage: bindablePercentage)
+	}
     
     var body: some View {
         // - Fully Vaccinated
         HStack(alignment: .top) {
             VStack(alignment: .center, spacing: 10.0) {
                 ZStack {
-
-                    Circle()
-                        .foregroundColor(self.color)
+					
+					Circle()
+						.foregroundColor(self.color)
+						
+					
+//					CurvedText(text: "Fully Vacinated", radius: 55)
+//						.rotationEffect(Angle(degrees: 0))
+//						.font(.callout)
+//
+//						.foregroundColor(.white)
+//						.multilineTextAlignment(.center)
+//						.padding([.top], 3.0)
+					
 
                     Text("\(self.percentage)%")
                         .font(.title2)
@@ -31,6 +54,7 @@ struct MetricView: View {
                         .padding([.top], 3.0)
                 }.padding([.bottom], 2.0)
                 
+				
                 Text(self.title)
                     .font(.caption)
                     .fontWeight(.medium)
