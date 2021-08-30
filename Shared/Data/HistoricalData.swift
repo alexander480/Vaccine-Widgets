@@ -21,7 +21,7 @@ struct CountryData: Codable {
 }
 
 struct HistoricalMetric: Codable {
-    //let date: Date
+    // let date: Date
     let totalVaccinations, peopleVaccinated: Double?
     let totalVaccinationsPerHundred, peopleVaccinatedPerHundred: Double?
     let dailyVaccinations, dailyVaccinationsPerMillion, peopleFullyVaccinated: Double?
@@ -29,7 +29,7 @@ struct HistoricalMetric: Codable {
     let dailyVaccinationsRaw: Double?
 
     enum CodingKeys: String, CodingKey {
-        //case date
+        // case date
         case totalVaccinations = "total_vaccinations"
         case peopleVaccinated = "people_vaccinated"
         case totalVaccinationsPerHundred = "total_vaccinations_per_hundred"

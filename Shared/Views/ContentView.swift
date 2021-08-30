@@ -28,10 +28,11 @@ struct ContentView: View {
 
             // MARK: Historical Metrics
             
-			let completedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleFullyVaccinatedPerHundred })
-            let initiatedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleVaccinatedPerHundred })
-            let unvaccinatedTimeline: [Double] = initiatedTimeline.compactMap({ return (100.0 - $0) })
+			// let completedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleFullyVaccinatedPerHundred })
+            // let initiatedTimeline: [Double] = self.model.historical.compactMap({ return $0.peopleVaccinatedPerHundred })
+            // let unvaccinatedTimeline: [Double] = initiatedTimeline.compactMap({ return (100.0 - $0) })
             
+			let dailyVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.dailyVaccinations })
             // let totalVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.totalVaccinations })
             
             // ScrollView(.horizontal, showsIndicators: false) {
@@ -45,24 +46,31 @@ struct ContentView: View {
                         let greenGradient = GradientColor(start: .green, end: .green)
                         let blueGradient = GradientColor(start: .blue, end: .blue)
                         let redGradient = GradientColor(start: .red, end: .red)
+						
+						// -- Daily Vaccinations - Line Chart
+						let dailyVaccinationsStyle = ChartStyle(backgroundColor: .white, accentColor: .blue, gradientColor: GradientColors.bluPurpl, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
+						
+						LineView(data: dailyVaccinationsTimeline, title: "Daily Vaccinations", legend: "Vaccinations Per Day", style: dailyVaccinationsStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
+							.padding([.leading, .trailing])
+							.frame(width: chartWidth, height: 360, alignment: .top)
                         
                         // -- Fully Vaccinated - Line Chart
-                        let fullyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: greenGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
-                        LineView(data: completedTimeline, title: "Fully Vaccinated", legend: "US Population", style: fullyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
-                            .padding([.leading, .trailing])
-                            .frame(width: chartWidth, height: 360, alignment: .top)
+//                        let fullyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: greenGradient, textColor: .green, legendTextColor: .green, dropShadowColor: .gray)
+//                        LineView(data: completedTimeline, title: "Fully Vaccinated", legend: "US Population", style: fullyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+//                            .padding([.leading, .trailing])
+//                            .frame(width: chartWidth, height: 360, alignment: .top)
                         
                         // -- Partially Vaccinated - Line Chart
-                        let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: blueGradient, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
-                        LineView(data: initiatedTimeline, title: "Partially Vaccinated", legend: "US Population", style: partiallyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
-                            .padding([.leading, .trailing])
-                            .frame(width: chartWidth, height: 360, alignment: .top)
+//                        let partiallyVaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .orange, gradientColor: blueGradient, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
+//                        LineView(data: initiatedTimeline, title: "Partially Vaccinated", legend: "US Population", style: partiallyVaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+//                            .padding([.leading, .trailing])
+//                            .frame(width: chartWidth, height: 360, alignment: .top)
                         
                         // -- Not Vaccinated - Line Chart
-                        let unvaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: redGradient, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
-                        LineView(data: unvaccinatedTimeline, title: "Not Vaccinated", legend: "US Population", style: unvaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
-                            .padding([.leading, .trailing])
-                            .frame(width: chartWidth, height: 360, alignment: .top)
+//                        let unvaccinatedStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: redGradient, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
+//                        LineView(data: unvaccinatedTimeline, title: "Not Vaccinated", legend: "US Population", style: unvaccinatedStyle, valueSpecifier: "%.0f%%", legendSpecifier: "%.0f%%")
+//                            .padding([.leading, .trailing])
+//                            .frame(width: chartWidth, height: 360, alignment: .top)
                     }
                 }
 			}.onAppear(perform: self.model.fetchHistorical)
@@ -73,6 +81,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let model: DataModel = DataModel()
-        ContentView(model: model)
+		ContentView(model: model)
     }
 }

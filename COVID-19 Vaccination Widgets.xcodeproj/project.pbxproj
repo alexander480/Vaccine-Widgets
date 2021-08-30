@@ -81,7 +81,7 @@
 		0AAB447F2671B8F000F03F03 /* VaccineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineApp.swift; sourceTree = "<group>"; };
 		0AAB44802671B8F000F03F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AAB44812671B8F100F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0AAB44862671B8F100F03F03 /* Vaccination Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaccination Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB44862671B8F100F03F03 /* Vaccine Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaccine Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB44892671B8F100F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAB44A32671C5AB00F03F03 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaccine Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +198,7 @@
 		0AAB44872671B8F100F03F03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AAB44862671B8F100F03F03 /* Vaccination Widgets.app */,
+				0AAB44862671B8F100F03F03 /* Vaccine Widgets.app */,
 				0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */,
 			);
 			name = Products;
@@ -256,7 +256,7 @@
 				0ABE829426746C2900726068 /* SwiftUICharts */,
 			);
 			productName = "COVID-19 Data Widgets (iOS)";
-			productReference = 0AAB44862671B8F100F03F03 /* Vaccination Widgets.app */;
+			productReference = 0AAB44862671B8F100F03F03 /* Vaccine Widgets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0AAB44A92671CB1400F03F03 /* Vaccine Widget */ = {
@@ -515,9 +515,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deltavel.COVID-19-Vaccination-Widgets";
-				PRODUCT_NAME = "Vaccination Widgets";
+				PRODUCT_NAME = "Vaccine Widgets";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,9 +539,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deltavel.COVID-19-Vaccination-Widgets";
-				PRODUCT_NAME = "Vaccination Widgets";
+				PRODUCT_NAME = "Vaccine Widgets";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
