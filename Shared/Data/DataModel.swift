@@ -11,7 +11,7 @@ class DataModel: ObservableObject {
 	var isoCode: String = "USA"
     @Published var current: CurrentMetric = CurrentMetric(initiated: 0.00, completed: 0.00)
 	@Published var historical: [HistoricalMetric] = [HistoricalMetric(totalVaccinations: 0.0, peopleVaccinated: 0.0, totalVaccinationsPerHundred: 0.0, peopleVaccinatedPerHundred: 0.0, dailyVaccinations: 0.0, dailyVaccinationsPerMillion: 0.0, peopleFullyVaccinated: 0.0, peopleFullyVaccinatedPerHundred: 0.0, dailyVaccinationsRaw: 0.0)]
-	@Published var actuals: [ActualData] = [ActualData(cases: 0, newCases: 0, deaths: 0, newDeaths: 0)]
+	@Published var actuals: [ActualData] = [ActualData(cases: 0, newCases: 0, deaths: 0, newDeaths: 0, vaccinesAdministered: 0)]
 
     func fetchCurrent() {
         let url = URL(string: "https://api.covidactnow.org/v2/country/US.json?apiKey=ce6514b87dc446568ccde9f609dbe8cb")!

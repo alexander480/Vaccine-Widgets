@@ -19,4 +19,8 @@ struct ActualData: Codable {
 	
 	let deaths: Int?
 	let newDeaths: Int?
+	
+	// convert [vaccinesAdministered] from running total [12, 14, 16] -> daily change [2, 2]
+	// to use for Daily Vaccinations
+	let vaccinesAdministered: Int?
 }
