@@ -25,8 +25,9 @@ struct ContentView: View {
 //				SingleMetricView(metrics: self.$model.current, status: VaccineStatus.initiated, shouldShortenTitle: true)
 //				SingleMetricView(metrics: self.$model.current, status: VaccineStatus.none, shouldShortenTitle: true)
 			}
-			.padding([.leading, .trailing])
-			.frame(width: UIScreen.main.bounds.width, height: 165, alignment: .top)
+			//.padding([.leading, .trailing])
+			.padding([.all], 0)
+			.frame(width: UIScreen.main.bounds.width, height: 150, alignment: .top)
 			.onAppear(perform: self.model.fetchCurrent)
 			
 			// MARK: Historical Metrics
