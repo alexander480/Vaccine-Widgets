@@ -30,7 +30,7 @@ struct MetricView: View {
     var body: some View {
         // - Fully Vaccinated
         HStack(alignment: .top) {
-            VStack(alignment: .center, spacing: 10.0) {
+            VStack(alignment: .center, spacing: 10) {
                 ZStack {
 					
 					Circle()
