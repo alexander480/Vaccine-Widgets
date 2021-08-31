@@ -11,6 +11,7 @@ class DataModel: ObservableObject {
 	var isoCode: String = "USA"
     @Published var current: CurrentMetric = CurrentMetric(initiated: 0.00, completed: 0.00)
 	@Published var historical: [HistoricalMetric] = [HistoricalMetric(totalVaccinations: 0.0, peopleVaccinated: 0.0, totalVaccinationsPerHundred: 0.0, peopleVaccinatedPerHundred: 0.0, dailyVaccinations: 0.0, dailyVaccinationsPerMillion: 0.0, peopleFullyVaccinated: 0.0, peopleFullyVaccinatedPerHundred: 0.0, dailyVaccinationsRaw: 0.0)]
+	@Published var actuals: [ActualData] = [ActualData(cases: 0, newCases: 0, deaths: 0, newDeaths: 0)]
 
     func fetchCurrent() {
         let url = URL(string: "https://api.covidactnow.org/v2/country/US.json?apiKey=ce6514b87dc446568ccde9f609dbe8cb")!
@@ -44,4 +45,20 @@ class DataModel: ObservableObject {
             } else if let error = error { print("[ERROR] Failed To Validate Historical Data. [MESSAGE] \(error.localizedDescription).") }
         }.resume()
     }
+	
+	func fetchActuals() {
+		let url = URL(string: "https://api.covidactnow.org/v2/country/US.timeseries.json?apiKey=ce6514b87dc446568ccde9f609dbe8cb")!
+		let request = URLRequest(url: url)
+		
+		URLSession.shared.dataTask(with: request) { data, response, error in
+			if let data = data {
+				do {
+					let historicalData = try JSONDecoder().decode(ActNowHistoricalData.self, from: data)
+					let actuals = historicalData.actualsTimeseries
+					DispatchQueue.main.async { self.actuals = actuals }
+					print("[SUCCESS] Successfully Validated ActNowHistoricalData Actuals. [DATA] \(actuals.count) Entries.")
+				} catch let decodeError { print("[ERROR] Failed To Decode ActNowHistoricalData. [MESSAGE] \(decodeError.localizedDescription).") }
+			} else if let error = error { print("[ERROR] Failed To Validate ActNowHistoricalData. [MESSAGE] \(error.localizedDescription).") }
+		}.resume()
+	}
 }
