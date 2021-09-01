@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ALExt
 import SwiftUI
 
 import SwiftUICharts
@@ -47,8 +48,11 @@ struct ContentView: View {
 				
 				// Daily Cases - Line Chart
 				
+				//let thirtyDaysAgo: Date = Date() - TimeInterval(86400 * 120)
+				//let thisMonthData: [ActualData] = self.model.actuals.filter { return $0.date > thirtyDaysAgo}
 				let dailyCasesData: [Int] = self.model.actuals.compactMap({ return $0.newCases })
 				let dailyCasesTimeline: [Double] = dailyCasesData.compactMap({ return Double($0) })
+				
 				let dailyCasesStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: GradientColors.orngPink, textColor: .red, legendTextColor: .secondary, dropShadowColor: .gray)
 				
 				LineView(data: dailyCasesTimeline, title: "Daily Cases", legend: "Cases Per Day", style: dailyCasesStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")

@@ -12,13 +12,13 @@ struct ActNowHistoricalData: Codable {
 }
 
 struct ActualData: Codable {
-	// let date: Date?
+	let date: Date
+	
+	let newCases: Int?
+	let newDeaths: Int?
 	
 	let cases: Int?
-	let newCases: Int?
-	
 	let deaths: Int?
-	let newDeaths: Int?
 	
 	// convert [vaccinesAdministered] from running total [12, 14, 16] -> daily change [2, 2]
 	// to use for Daily Vaccinations
