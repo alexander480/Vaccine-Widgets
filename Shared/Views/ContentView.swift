@@ -39,7 +39,11 @@ struct ContentView: View {
 				
 				// Daily Vaccinations - Line Chart
 				
-				let dailyVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.dailyVaccinations })
+//				let dailyVaccinationsTimeline: [Double] = self.model.historical.compactMap({ return $0.dailyVaccinations })
+//				let dailyVaccinationsStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: GradientColors.blu, textColor: .blue, legendTextColor: .secondary, dropShadowColor: .gray)
+				
+				// let dailyVaccinationsTimeline: [Double] = self.model.vaccinationTrends.map { return $0.rollingAverage }
+				let dailyVaccinationsTimeline: [Double] = self.model.vaccinationTrends.map { $0.rollingAverage }
 				let dailyVaccinationsStyle = ChartStyle(backgroundColor: .white, accentColor: .green, gradientColor: GradientColors.blu, textColor: .blue, legendTextColor: .secondary, dropShadowColor: .gray)
 				
 				LineView(data: dailyVaccinationsTimeline, title: "Daily Vaccinations", legend: "Vaccinations Per Day", style: dailyVaccinationsStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
@@ -50,9 +54,8 @@ struct ContentView: View {
 				
 				//let thirtyDaysAgo: Date = Date() - TimeInterval(86400 * 120)
 				//let thisMonthData: [ActualData] = self.model.actuals.filter { return $0.date > thirtyDaysAgo}
-				let dailyCasesData: [Int] = self.model.actuals.compactMap({ return $0.newCases })
-				let dailyCasesTimeline: [Double] = dailyCasesData.compactMap({ return Double($0) })
 				
+				let dailyCasesTimeline = self.model.actuals.newCasesAverage
 				let dailyCasesStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: GradientColors.orngPink, textColor: .red, legendTextColor: .secondary, dropShadowColor: .gray)
 				
 				LineView(data: dailyCasesTimeline, title: "Daily Cases", legend: "Cases Per Day", style: dailyCasesStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
@@ -61,7 +64,8 @@ struct ContentView: View {
 			}
 			
 		}
-		.onAppear(perform: self.model.fetchHistorical)
+		.onAppear(perform: self.model.fetchVaccinationTrends)
+		// .onAppear(perform: self.model.fetchHistorical)
 		.onAppear(perform: self.model.fetchActuals)
 	}
 }

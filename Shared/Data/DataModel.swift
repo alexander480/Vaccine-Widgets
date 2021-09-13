@@ -10,8 +10,9 @@ import Foundation
 class DataModel: ObservableObject {
 	var isoCode: String = "USA"
     @Published var current: CurrentMetric = CurrentMetric(initiated: 0.00, completed: 0.00)
-	@Published var historical: [HistoricalMetric] = [HistoricalMetric(date: Date(), totalVaccinations: 0.0, peopleVaccinated: 0.0, totalVaccinationsPerHundred: 0.0, peopleVaccinatedPerHundred: 0.0, dailyVaccinations: 0.0, dailyVaccinationsPerMillion: 0.0, peopleFullyVaccinated: 0.0, peopleFullyVaccinatedPerHundred: 0.0, dailyVaccinationsRaw: 0.0)]
-	@Published var actuals: [ActualData] = [ActualData(date: Date(), newCases: 0, newDeaths: 0, cases: 0, deaths: 0, vaccinesAdministered: 0)]
+	@Published var historical: [HistoricalMetric] = [HistoricalMetric()]
+	@Published var actuals: [ActualData] = [ActualData()]
+	@Published var vaccinationTrends: [VaccinationTrendEntry] = [VaccinationTrendEntry(date: Date())]
 
     func fetchCurrent() {
         let url = URL(string: "https://api.covidactnow.org/v2/country/US.json?apiKey=ce6514b87dc446568ccde9f609dbe8cb")!
@@ -73,6 +74,29 @@ class DataModel: ObservableObject {
 					
 				} catch let decodeError { print("[ERROR] Failed To Decode ActNowHistoricalData. [MESSAGE] \(decodeError.localizedDescription).") }
 			} else if let error = error { print("[ERROR] Failed To Validate ActNowHistoricalData. [MESSAGE] \(error.localizedDescription).") }
+		}.resume()
+	}
+	
+	func fetchVaccinationTrends(/*forState: String? = "US"*/) {
+		// let url = URL(string: "https://data.cdc.gov/resource/rh2h-3yt2.json?location=\(forState)")!
+		let url = URL(string: "https://data.cdc.gov/resource/rh2h-3yt2.json?location=US")!
+		let request = URLRequest(url: url)
+		
+		URLSession.shared.dataTask(with: request) { data, response, error in
+			if let data = data {
+				do {
+					// Setup Decoder For Date Format
+					let decoder = JSONDecoder()
+						decoder.dateDecodingStrategy = .formatted(DateFormatter.cdcDateFormat)
+					
+					// Decode Actual Data
+					let vaccinationTrends = try decoder.decode([VaccinationTrendEntry].self, from: data)
+					
+					print("[SUCCESS] Successfully Validated Vaccination Trends [INFO] \(vaccinationTrends.count) Entries.")
+					DispatchQueue.main.async { self.vaccinationTrends = vaccinationTrends }
+
+				} catch let decodeError { print("[ERROR] Failed To Decode Vaccination Trends Data. [MESSAGE] \(decodeError.localizedDescription)") }
+			} else if let error = error { print("[ERROR] Failed To Validate Vaccination Trends Data. [MESSAGE] \(error.localizedDescription)") }
 		}.resume()
 	}
 	

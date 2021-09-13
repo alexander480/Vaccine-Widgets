@@ -19,9 +19,9 @@ struct CurrentMetric: Codable {
 	let testPositivity: Double?
 	let icuCapacity: Double?
 	
-	init(initiated: Double, completed: Double, infectionRate: Double? = nil, testPositivity: Double? = nil, icuCapacity: Double? = nil) {
-		self.initiated = initiated
-		self.completed = completed
+	init(initiated: Double? = 0.0, completed: Double? = 0.0, infectionRate: Double? = nil, testPositivity: Double? = nil, icuCapacity: Double? = nil) {
+		self.initiated = initiated ?? 0.0
+		self.completed = completed ?? 0.0
 		
 		self.infectionRate = infectionRate
 		self.testPositivity = testPositivity

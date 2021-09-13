@@ -26,8 +26,8 @@
 		0A631C6926D5E1410072BAC4 /* SingleMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784226AFB61B003AFC47 /* SingleMetricView.swift */; };
 		0A631C6C26D5F10F0072BAC4 /* CurvedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */; };
 		0A631C6D26D5F10F0072BAC4 /* CurvedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */; };
-		0A6DF13426DDDBA900CD66D9 /* ActNowHistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActNowHistoricalData.swift */; };
-		0A6DF13526DDDBA900CD66D9 /* ActNowHistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActNowHistoricalData.swift */; };
+		0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
+		0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
 		0A6DF13826DEEED400CD66D9 /* ALExt in Frameworks */ = {isa = PBXBuildFile; productRef = 0A6DF13726DEEED400CD66D9 /* ALExt */; };
 		0A6DF13926DEF66100CD66D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
 		0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
@@ -42,6 +42,12 @@
 		0AAB44B82671CB1600F03F03 /* Vaccine Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44BD2671CC4D00F03F03 /* Entry.swift */; };
 		0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABE829426746C2900726068 /* SwiftUICharts */; };
+		0ADBC6B226EEDB4300FFB41F /* CaseTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */; };
+		0ADBC6B326EEDB4300FFB41F /* CaseTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */; };
+		0ADBC6B526EEDEEB00FFB41F /* UnitedStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B426EEDEEB00FFB41F /* UnitedStates.swift */; };
+		0ADBC6B626EEDEEB00FFB41F /* UnitedStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B426EEDEEB00FFB41F /* UnitedStates.swift */; };
+		0ADBC6B926EEEEA100FFB41F /* VaccinationTrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B826EEEEA100FFB41F /* VaccinationTrends.swift */; };
+		0ADBC6BA26EEEEA100FFB41F /* VaccinationTrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B826EEEEA100FFB41F /* VaccinationTrends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +88,7 @@
 		0A23785926AFD3DD003AFC47 /* VaccineWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidgetBundle.swift; sourceTree = "<group>"; };
 		0A23785C26AFD912003AFC47 /* MultiMetricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMetricWidget.swift; sourceTree = "<group>"; };
 		0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurvedText.swift; path = MetricViews/CurvedText.swift; sourceTree = "<group>"; };
-		0A6DF13326DDDBA900CD66D9 /* ActNowHistoricalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActNowHistoricalData.swift; sourceTree = "<group>"; };
+		0A6DF13326DDDBA900CD66D9 /* ActualData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualData.swift; sourceTree = "<group>"; };
 		0AAB447F2671B8F000F03F03 /* VaccineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineApp.swift; sourceTree = "<group>"; };
 		0AAB44802671B8F000F03F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AAB44812671B8F100F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 		0AAB44B32671CB1600F03F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAB44B52671CB1600F03F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAB44BD2671CC4D00F03F03 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseTimeline.swift; sourceTree = "<group>"; };
+		0ADBC6B426EEDEEB00FFB41F /* UnitedStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStates.swift; sourceTree = "<group>"; };
+		0ADBC6B826EEEEA100FFB41F /* VaccinationTrends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationTrends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +135,8 @@
 				0A23783526ABD40D003AFC47 /* DataModel.swift */,
 				0A23782626ABBC90003AFC47 /* CurrentData.swift */,
 				0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */,
-				0A6DF13326DDDBA900CD66D9 /* ActNowHistoricalData.swift */,
+				0A6DF13326DDDBA900CD66D9 /* ActualData.swift */,
+				0ADBC6B726EEEC7C00FFB41F /* CDC */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -241,6 +251,16 @@
 			path = Widget;
 			sourceTree = "<group>";
 		};
+		0ADBC6B726EEEC7C00FFB41F /* CDC */ = {
+			isa = PBXGroup;
+			children = (
+				0ADBC6B426EEDEEB00FFB41F /* UnitedStates.swift */,
+				0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */,
+				0ADBC6B826EEEEA100FFB41F /* VaccinationTrends.swift */,
+			);
+			path = CDC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,14 +370,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADBC6B226EEDB4300FFB41F /* CaseTimeline.swift in Sources */,
 				0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */,
 				0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */,
 				0A631C6526D5E11A0072BAC4 /* MultiMetricView.swift in Sources */,
 				0A631C6C26D5F10F0072BAC4 /* CurvedText.swift in Sources */,
+				0ADBC6B926EEEEA100FFB41F /* VaccinationTrends.swift in Sources */,
 				0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */,
 				0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
-				0A6DF13426DDDBA900CD66D9 /* ActNowHistoricalData.swift in Sources */,
+				0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */,
 				0A631C6626D5E11A0072BAC4 /* SingleMetricView.swift in Sources */,
+				0ADBC6B526EEDEEB00FFB41F /* UnitedStates.swift in Sources */,
 				0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */,
 				0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */,
 				0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */,
@@ -369,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAB44B22671CB1400F03F03 /* CompletedVaccineWidget.swift in Sources */,
+				0ADBC6BA26EEEEA100FFB41F /* VaccinationTrends.swift in Sources */,
 				0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */,
 				0A631C6926D5E1410072BAC4 /* SingleMetricView.swift in Sources */,
 				0A631C6D26D5F10F0072BAC4 /* CurvedText.swift in Sources */,
@@ -378,10 +402,12 @@
 				0A23785426AFD144003AFC47 /* InitiatedVaccineWidget.swift in Sources */,
 				0A631C6826D5E1410072BAC4 /* MetricView.swift in Sources */,
 				0A631C6726D5E1410072BAC4 /* MultiMetricView.swift in Sources */,
+				0ADBC6B626EEDEEB00FFB41F /* UnitedStates.swift in Sources */,
 				0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */,
 				0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */,
+				0ADBC6B326EEDB4300FFB41F /* CaseTimeline.swift in Sources */,
 				0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */,
-				0A6DF13526DDDBA900CD66D9 /* ActNowHistoricalData.swift in Sources */,
+				0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */,
 				0A6DF13926DEF66100CD66D9 /* Extensions.swift in Sources */,
 				0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
 				0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */,

@@ -40,4 +40,17 @@ struct HistoricalMetric: Codable {
         case peopleFullyVaccinatedPerHundred = "people_fully_vaccinated_per_hundred"
         case dailyVaccinationsRaw = "daily_vaccinations_raw"
     }
+	
+	init(date: Date? = Date(), totalVaccinations: Double? = 0.0, peopleVaccinated: Double? = 0.0, totalVaccinationsPerHundred: Double? = 0.0, peopleVaccinatedPerHundred: Double? = 0.0, dailyVaccinations: Double? = 0.0, dailyVaccinationsPerMillion: Double? = 0.0, peopleFullyVaccinated: Double? = 0.0, peopleFullyVaccinatedPerHundred: Double? = 0.0, dailyVaccinationsRaw: Double? = 0.0) {
+		self.date = date ?? Date()
+		self.totalVaccinations = totalVaccinations
+		self.peopleVaccinated = peopleVaccinated
+		self.totalVaccinationsPerHundred = totalVaccinationsPerHundred
+		self.peopleVaccinatedPerHundred = peopleVaccinatedPerHundred
+		self.dailyVaccinations = dailyVaccinations
+		self.dailyVaccinationsPerMillion = dailyVaccinationsPerMillion
+		self.peopleFullyVaccinated = peopleFullyVaccinated
+		self.peopleFullyVaccinatedPerHundred = peopleFullyVaccinatedPerHundred
+		self.dailyVaccinationsRaw = dailyVaccinationsRaw
+	}
 }
