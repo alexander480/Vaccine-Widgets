@@ -31,7 +31,7 @@ struct ContentView: View {
 				.frame(height: 150.0)
 				.onAppear(perform: self.model.fetchCurrent)
 				
-				let dailyVaccinationsTimeline: [Double] = dailyVaccinationsThisMonth.dailyVaccinationsAverage
+				let dailyVaccinationsTimeline: [Double] = self.model.vaccinationTrends.dailyVaccinationsAverage
 				let dailyVaccinationsStyle = ChartStyle(backgroundColor: .black, accentColor: .blue, gradientColor: GradientColors.blu, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
 				
 				LineView(data: dailyVaccinationsTimeline, title: "Daily Vaccinations", legend: "Vaccinations Per Day", style: dailyVaccinationsStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")

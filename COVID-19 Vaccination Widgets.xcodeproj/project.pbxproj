@@ -11,8 +11,6 @@
 		0A065DBE26F020F4008DF36F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A065DBC26F020F4008DF36F /* DateExtensions.swift */; };
 		0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
 		0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
-		0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
-		0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
 		0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
 		0A23783826ABD40E003AFC47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23783526ABD40D003AFC47 /* DataModel.swift */; };
 		0A23784526AFB75C003AFC47 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23784426AFB75C003AFC47 /* Provider.swift */; };
@@ -78,7 +76,6 @@
 /* Begin PBXFileReference section */
 		0A065DBC26F020F4008DF36F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		0A23782626ABBC90003AFC47 /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
-		0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalData.swift; sourceTree = "<group>"; };
 		0A23783526ABD40D003AFC47 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0A23784226AFB61B003AFC47 /* SingleMetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMetricView.swift; sourceTree = "<group>"; };
 		0A23784426AFB75C003AFC47 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
@@ -135,7 +132,6 @@
 			children = (
 				0A23783526ABD40D003AFC47 /* DataModel.swift */,
 				0A23782626ABBC90003AFC47 /* CurrentData.swift */,
-				0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */,
 				0A6DF13326DDDBA900CD66D9 /* ActualData.swift */,
 				0ADBC6B726EEEC7C00FFB41F /* CDC */,
 			);
@@ -377,7 +373,6 @@
 				0A631C6C26D5F10F0072BAC4 /* CurvedText.swift in Sources */,
 				0ADBC6B926EEEEA100FFB41F /* VaccinationTrends.swift in Sources */,
 				0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */,
-				0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
 				0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */,
 				0A631C6626D5E11A0072BAC4 /* SingleMetricView.swift in Sources */,
 				0ADBC6B526EEDEEB00FFB41F /* UnitedStates.swift in Sources */,
@@ -411,7 +406,6 @@
 				0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */,
 				0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */,
 				0A6DF13926DEF66100CD66D9 /* Extensions.swift in Sources */,
-				0A23782D26ABBEE4003AFC47 /* HistoricalData.swift in Sources */,
 				0A23785A26AFD3DD003AFC47 /* VaccineWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VZ4LX93GR9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -572,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VZ4LX93GR9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -597,7 +591,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VZ4LX93GR9;
 				INFOPLIST_FILE = Widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -622,7 +616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VZ4LX93GR9;
 				INFOPLIST_FILE = Widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

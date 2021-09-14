@@ -10,7 +10,6 @@ import Foundation
 class DataModel: ObservableObject {
 	var isoCode: String = "USA"
     @Published var current: CurrentMetric = CurrentMetric(initiated: 0.00, completed: 0.00)
-	@Published var historical: [HistoricalMetric] = [HistoricalMetric()]
 	@Published var actuals: [ActualData] = [ActualData()]
 	@Published var vaccinationTrends: [VaccinationTrendEntry] = [VaccinationTrendEntry(date: Date())]
 
@@ -26,31 +25,6 @@ class DataModel: ObservableObject {
                     DispatchQueue.main.async { self.current = currentData.metrics }
                 } catch let decodeError { print("[ERROR] Failed To Decode Current Data. [MESSAGE] \(decodeError.localizedDescription).") }
             } else if let error = error { print("[ERROR] Failed To Validate Current Data. [MESSAGE] \(error.localizedDescription).") }
-        }.resume()
-    }
-    
-    func fetchHistorical() {
-        let url = URL(string: "https://covid.ourworldindata.org/data/vaccinations/vaccinations.json")!
-        let request = URLRequest(url: url)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                do {
-					// Setup Decoder For Date Format
-					let decoder = JSONDecoder()
-					decoder.dateDecodingStrategy = .formatted(.yyyyMMdd)
-					
-					// Decode Actual Data
-                    let allCountries = try decoder.decode([CountryData].self, from: data)
-					
-					// Locate Data For Specific Country
-					if let specifiedCountry = allCountries.first(where: { $0.isoCode == self.isoCode }) {
-                        print("[SUCCESS] Successfully Validated Historical Metrics For Specified Country. [DATA] \(specifiedCountry.metrics.count) Entries.")
-                        DispatchQueue.main.async { self.historical = specifiedCountry.metrics }
-                    }
-                    else { print("[ERROR] Failed To Validate Historical Data For Specified Country.") }
-                } catch let decodeError { print("[ERROR] Failed To Decode Historical Data. [MESSAGE] \(decodeError.localizedDescription).") }
-            } else if let error = error { print("[ERROR] Failed To Validate Historical Data. [MESSAGE] \(error.localizedDescription).") }
         }.resume()
     }
 	
@@ -102,9 +76,7 @@ class DataModel: ObservableObject {
 	
 	// MARK: Persisting Data
 	// ----
-	
-	// MARk: Example From Apple
-	// ----
+	// Example From Apple
 	
 //
 //	private static var documentsFolder: URL {
