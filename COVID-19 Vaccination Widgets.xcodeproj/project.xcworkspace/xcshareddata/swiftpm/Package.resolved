@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ALExt",
-        "repositoryURL": "https://github.com/alexander480/ALExt.git",
-        "state": {
-          "branch": null,
-          "revision": "5b9356f3b3d3e8f22dac1c4dc6b3cb71874def1f",
-          "version": "1.0.10"
-        }
-      },
-      {
         "package": "SwiftUICharts",
         "repositoryURL": "https://github.com/AppPear/ChartView",
         "state": {

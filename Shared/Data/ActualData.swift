@@ -47,4 +47,8 @@ extension Array where Element == ActualData {
 		
 		return dailyCasesTimeline
 	}
+	
+	func getPeriod(_ period: Calendar.Component) -> [ActualData] {
+		return self.filter { $0.date.isInCurrent(period) }
+	}
 }

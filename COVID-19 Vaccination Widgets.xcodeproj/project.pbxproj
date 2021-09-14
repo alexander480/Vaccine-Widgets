@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A065DBD26F020F4008DF36F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A065DBC26F020F4008DF36F /* DateExtensions.swift */; };
+		0A065DBE26F020F4008DF36F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A065DBC26F020F4008DF36F /* DateExtensions.swift */; };
 		0A23782726ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
 		0A23782926ABBC90003AFC47 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782626ABBC90003AFC47 /* CurrentData.swift */; };
 		0A23782B26ABBEE4003AFC47 /* HistoricalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */; };
@@ -28,7 +30,6 @@
 		0A631C6D26D5F10F0072BAC4 /* CurvedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A631C6B26D5F10F0072BAC4 /* CurvedText.swift */; };
 		0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
 		0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
-		0A6DF13826DEEED400CD66D9 /* ALExt in Frameworks */ = {isa = PBXBuildFile; productRef = 0A6DF13726DEEED400CD66D9 /* ALExt */; };
 		0A6DF13926DEF66100CD66D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
 		0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
 		0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB447F2671B8F000F03F03 /* VaccineApp.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A065DBC26F020F4008DF36F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		0A23782626ABBC90003AFC47 /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
 		0A23782A26ABBEE4003AFC47 /* HistoricalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalData.swift; sourceTree = "<group>"; };
 		0A23783526ABD40D003AFC47 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */,
-				0A6DF13826DEEED400CD66D9 /* ALExt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				0AAB44A32671C5AB00F03F03 /* Extensions.swift */,
+				0A065DBC26F020F4008DF36F /* DateExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,7 +283,6 @@
 			name = "COVID-19 Vaccination Widgets (iOS)";
 			packageProductDependencies = (
 				0ABE829426746C2900726068 /* SwiftUICharts */,
-				0A6DF13726DEEED400CD66D9 /* ALExt */,
 			);
 			productName = "COVID-19 Data Widgets (iOS)";
 			productReference = 0AAB44862671B8F100F03F03 /* Vaccine Widgets.app */;
@@ -334,7 +335,6 @@
 			mainGroup = 0AAB44792671B8F000F03F03;
 			packageReferences = (
 				0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */,
-				0A6DF13626DEEED400CD66D9 /* XCRemoteSwiftPackageReference "ALExt" */,
 			);
 			productRefGroup = 0AAB44872671B8F100F03F03 /* Products */;
 			projectDirPath = "";
@@ -381,6 +381,7 @@
 				0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */,
 				0A631C6626D5E11A0072BAC4 /* SingleMetricView.swift in Sources */,
 				0ADBC6B526EEDEEB00FFB41F /* UnitedStates.swift in Sources */,
+				0A065DBD26F020F4008DF36F /* DateExtensions.swift in Sources */,
 				0A23783626ABD40D003AFC47 /* DataModel.swift in Sources */,
 				0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */,
 				0AAB44A42671C5AB00F03F03 /* Extensions.swift in Sources */,
@@ -405,6 +406,7 @@
 				0ADBC6B626EEDEEB00FFB41F /* UnitedStates.swift in Sources */,
 				0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */,
 				0A23784726AFB81D003AFC47 /* EntryHelper.swift in Sources */,
+				0A065DBE26F020F4008DF36F /* DateExtensions.swift in Sources */,
 				0ADBC6B326EEDB4300FFB41F /* CaseTimeline.swift in Sources */,
 				0A23785626AFD1B4003AFC47 /* NoneVaccineWidget.swift in Sources */,
 				0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */,
@@ -673,14 +675,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0A6DF13626DEEED400CD66D9 /* XCRemoteSwiftPackageReference "ALExt" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alexander480/ALExt.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.10;
-			};
-		};
 		0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
@@ -692,11 +686,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A6DF13726DEEED400CD66D9 /* ALExt */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A6DF13626DEEED400CD66D9 /* XCRemoteSwiftPackageReference "ALExt" */;
-			productName = ALExt;
-		};
 		0ABE829426746C2900726068 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */;

@@ -42,14 +42,18 @@ extension VaccinationTrendEntry {
 
 extension Array where Element == VaccinationTrendEntry {
 	var dailyVaccinationsAverage: [Double] {
-		let dailyVaccinations: [Int] = self.map { Int($0.dailyVaccinations) ?? 0 }
+		let dailyVaccinations: [Int] = self.map { Int($0.dailyVaccinations) }
 		var dailyVaccinationsTimeline: [Double] = self.map { $0.dailyVaccinations }
 		
-		if dailyVaccinationsTimeline.count > 7 {
-			let dailyVaccinationsAverage = dailyVaccinations.movingAverage(period: 7)
+		if dailyVaccinationsTimeline.count > 14 {
+			let dailyVaccinationsAverage = dailyVaccinations.movingAverage(period: 14)
 			dailyVaccinationsTimeline = dailyVaccinationsAverage.sorted { $0.key < $1.key }.map { Double($0.value) }
 		}
 		
 		return dailyVaccinationsTimeline
+	}
+	
+	func getPeriod(_ period: Calendar.Component) -> [VaccinationTrendEntry] {
+		return self.filter { $0.date.isInCurrent(period) }
 	}
 }

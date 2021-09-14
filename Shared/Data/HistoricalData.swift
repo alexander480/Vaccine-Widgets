@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct CountryData: Codable {
     let name: String
     let isoCode: String
