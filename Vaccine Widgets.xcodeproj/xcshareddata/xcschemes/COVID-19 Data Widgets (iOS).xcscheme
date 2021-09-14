@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0AAB44852671B8F100F03F03"
                BuildableName = "Vaccine Widgets.app"
-               BlueprintName = "COVID-19 Vaccination Widgets (iOS)"
-               ReferencedContainer = "container:COVID-19 Vaccination Widgets.xcodeproj">
+               BlueprintName = "Vaccine Widgets (iOS)"
+               ReferencedContainer = "container:Vaccine Widgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AAB44852671B8F100F03F03"
             BuildableName = "Vaccine Widgets.app"
-            BlueprintName = "COVID-19 Vaccination Widgets (iOS)"
-            ReferencedContainer = "container:COVID-19 Vaccination Widgets.xcodeproj">
+            BlueprintName = "Vaccine Widgets (iOS)"
+            ReferencedContainer = "container:Vaccine Widgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -70,8 +70,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0AAB44852671B8F100F03F03"
             BuildableName = "Vaccine Widgets.app"
-            BlueprintName = "COVID-19 Vaccination Widgets (iOS)"
-            ReferencedContainer = "container:COVID-19 Vaccination Widgets.xcodeproj">
+            BlueprintName = "Vaccine Widgets (iOS)"
+            ReferencedContainer = "container:Vaccine Widgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

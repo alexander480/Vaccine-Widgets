@@ -262,9 +262,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AAB44852671B8F100F03F03 /* COVID-19 Vaccination Widgets (iOS) */ = {
+		0AAB44852671B8F100F03F03 /* Vaccine Widgets (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AAB449A2671B8F100F03F03 /* Build configuration list for PBXNativeTarget "COVID-19 Vaccination Widgets (iOS)" */;
+			buildConfigurationList = 0AAB449A2671B8F100F03F03 /* Build configuration list for PBXNativeTarget "Vaccine Widgets (iOS)" */;
 			buildPhases = (
 				0AAB44822671B8F100F03F03 /* Sources */,
 				0AAB44832671B8F100F03F03 /* Frameworks */,
@@ -276,7 +276,7 @@
 			dependencies = (
 				0AAB44B72671CB1600F03F03 /* PBXTargetDependency */,
 			);
-			name = "COVID-19 Vaccination Widgets (iOS)";
+			name = "Vaccine Widgets (iOS)";
 			packageProductDependencies = (
 				0ABE829426746C2900726068 /* SwiftUICharts */,
 			);
@@ -320,7 +320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Vaccination Widgets" */;
+			buildConfigurationList = 0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "Vaccine Widgets" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -336,7 +336,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AAB44852671B8F100F03F03 /* COVID-19 Vaccination Widgets (iOS) */,
+				0AAB44852671B8F100F03F03 /* Vaccine Widgets (iOS) */,
 				0AAB44A92671CB1400F03F03 /* Vaccine Widget */,
 			);
 		};
@@ -639,7 +639,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "COVID-19 Vaccination Widgets" */ = {
+		0AAB447D2671B8F000F03F03 /* Build configuration list for PBXProject "Vaccine Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AAB44982671B8F100F03F03 /* Debug */,
@@ -648,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AAB449A2671B8F100F03F03 /* Build configuration list for PBXNativeTarget "COVID-19 Vaccination Widgets (iOS)" */ = {
+		0AAB449A2671B8F100F03F03 /* Build configuration list for PBXNativeTarget "Vaccine Widgets (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AAB449B2671B8F100F03F03 /* Debug */,
