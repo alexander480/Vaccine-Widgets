@@ -5,6 +5,8 @@
 //  Created by Alexander Lester on 6/9/21.
 //
 
+#warning("Update Privacy Policy If Using Location")
+
 import Foundation
 import SwiftUI
 
