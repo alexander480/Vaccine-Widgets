@@ -31,17 +31,19 @@ struct ContentView: View {
 				.frame(height: 150.0)
 				.onAppear(perform: self.model.fetchCurrent)
 				
-				let dailyVaccinationsTimeline: [Double] = self.model.vaccinationTrends.dailyVaccinationsAverage
-				let dailyVaccinationsStyle = ChartStyle(backgroundColor: .black, accentColor: .blue, gradientColor: GradientColors.blu, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
+				let backgroundColor = Color(UIColor.systemBackground)
 				
-				LineView(data: dailyVaccinationsTimeline, title: "Daily Vaccinations", legend: "Vaccinations Per Day", style: dailyVaccinationsStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
+				let dailyVaccinationsTimeline: [Double] = self.model.vaccinationTrends.dailyVaccinationsAverage
+				let dailyVaccinationsStyle = ChartStyle(backgroundColor: backgroundColor, accentColor: .blue, gradientColor: GradientColors.blu, textColor: .blue, legendTextColor: .blue, dropShadowColor: .gray)
+				
+				LineView(data: dailyVaccinationsTimeline, title: "Daily Vaccinations", legend: "Daily Vaccinations", style: dailyVaccinationsStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
 					.padding()
 					.frame(width: UIScreen.main.bounds.width, height: 375, alignment: .top)
-
-				let dailyCasesTimeline = self.model.actuals.newCasesAverage
-				let dailyCasesStyle = ChartStyle(backgroundColor: .white, accentColor: .red, gradientColor: GradientColors.orngPink, textColor: .red, legendTextColor: .secondary, dropShadowColor: .gray)
 				
-				LineView(data: dailyCasesTimeline, title: "Daily Cases", legend: "Cases Per Day", style: dailyCasesStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
+				let dailyCasesTimeline = self.model.actuals.newCasesAverage
+				let dailyCasesStyle = ChartStyle(backgroundColor: backgroundColor, accentColor: .red, gradientColor: GradientColors.orngPink, textColor: .red, legendTextColor: .red, dropShadowColor: .gray)
+				
+				LineView(data: dailyCasesTimeline, title: "Daily Cases", legend: "Daily Cases", style: dailyCasesStyle, valueSpecifier: "%.0lf\n", legendSpecifier: "%.0lf\n")
 					.padding()
 					.frame(width: UIScreen.main.bounds.width, height: 375, alignment: .top)
 			}

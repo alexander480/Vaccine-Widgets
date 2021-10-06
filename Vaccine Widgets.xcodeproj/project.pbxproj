@@ -29,6 +29,7 @@
 		0A6DF13426DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
 		0A6DF13526DDDBA900CD66D9 /* ActualData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DF13326DDDBA900CD66D9 /* ActualData.swift */; };
 		0A6DF13926DEF66100CD66D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44A32671C5AB00F03F03 /* Extensions.swift */; };
+		0A7236CA26FAF11B00889B21 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7236C926FAF11B00889B21 /* SwiftUICharts */; };
 		0AA3DE0D26B118C2006EC6EB /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23785126AFCE5A003AFC47 /* MetricView.swift */; };
 		0AAB44922671B8F100F03F03 /* VaccineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB447F2671B8F000F03F03 /* VaccineApp.swift */; };
 		0AAB44942671B8F100F03F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44802671B8F000F03F03 /* ContentView.swift */; };
@@ -40,7 +41,6 @@
 		0AAB44B42671CB1600F03F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB44B32671CB1600F03F03 /* Assets.xcassets */; };
 		0AAB44B82671CB1600F03F03 /* Vaccine Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0AAB44AA2671CB1400F03F03 /* Vaccine Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AAB44BE2671CC4D00F03F03 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB44BD2671CC4D00F03F03 /* Entry.swift */; };
-		0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABE829426746C2900726068 /* SwiftUICharts */; };
 		0ADBC6B226EEDB4300FFB41F /* CaseTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */; };
 		0ADBC6B326EEDB4300FFB41F /* CaseTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B126EEDB4300FFB41F /* CaseTimeline.swift */; };
 		0ADBC6B526EEDEEB00FFB41F /* UnitedStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADBC6B426EEDEEB00FFB41F /* UnitedStates.swift */; };
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ABE829526746C2900726068 /* SwiftUICharts in Frameworks */,
+				0A7236CA26FAF11B00889B21 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +278,7 @@
 			);
 			name = "Vaccine Widgets (iOS)";
 			packageProductDependencies = (
-				0ABE829426746C2900726068 /* SwiftUICharts */,
+				0A7236C926FAF11B00889B21 /* SwiftUICharts */,
 			);
 			productName = "COVID-19 Data Widgets (iOS)";
 			productReference = 0AAB44862671B8F100F03F03 /* Vaccine Widgets.app */;
@@ -330,7 +330,7 @@
 			);
 			mainGroup = 0AAB44792671B8F000F03F03;
 			packageReferences = (
-				0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */,
+				0A7236C826FAF11B00889B21 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 0AAB44872671B8F100F03F03 /* Products */;
 			projectDirPath = "";
@@ -669,7 +669,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		0A7236C826FAF11B00889B21 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
 			requirement = {
@@ -680,9 +680,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0ABE829426746C2900726068 /* SwiftUICharts */ = {
+		0A7236C926FAF11B00889B21 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0ABE829326746C2900726068 /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = 0A7236C826FAF11B00889B21 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
