@@ -15,7 +15,5 @@ An informational app, providing widgets to keep track of current vaccination rat
 
 ---
 
-<!--
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
--->
